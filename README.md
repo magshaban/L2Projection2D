@@ -11,7 +11,11 @@ which gives the mass matrix: <br />
 ![result55](/massmatplot.png)
 
 <br />
+which evaluated on the following mesh: <br />
 
+![result51](/mesh.png)
+
+For the given function: <br />
 f(x,y)= sin(sqrt(x^2 + y^2))
 <br />
 Note: you can shange the function from main file.<br />
