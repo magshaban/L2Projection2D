@@ -22,6 +22,7 @@ def delunay_tri(M):
     tri = Delaunay(points)
     plt.triplot(points[:,0], points[:,1], tri.simplices.copy())
     plt.plot(points[:,0], points[:,1], 'o')
+    plt.title('Delanauy Trianglaution of $\Omega = [-1,1] ^2$')
     plt.show()
 
     # to plot the mass matrix 
@@ -44,5 +45,5 @@ def poltall(x,y,z):
     ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
    
     fig.colorbar(surf, shrink=0.7, aspect=15)
-    
+    plt.title('$L^2$ projection of f(x)')
     plt.show()

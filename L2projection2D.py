@@ -1,3 +1,8 @@
+# This is the main file.
+# this code can be used to find the L2 projection of a given function in 1D.
+# Code by: Maged Shaban
+
+
 import numpy as np 
 import matplotlib.pyplot as plt
 
