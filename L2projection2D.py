@@ -68,7 +68,7 @@ def LoadVec2D(p,t):
 M = massmat(p,t)
 b = LoadVec2D(p,t)
 
-pf =  M@b
+pf =  np.linalg.inv(M)@b
 
 
 print('The Mass Matrix(M) = \n',M)
