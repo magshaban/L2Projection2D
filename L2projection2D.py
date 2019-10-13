@@ -41,7 +41,8 @@ def massmat(p,t):
 
 # The given function
 def func(x,y):
-    return np.sin(np.sqrt(x**2 + y**2))
+    return y + x
+#np.sin(np.sqrt(x**2+ y**2))
 
 
 # This laod vector function evaluation.
@@ -71,7 +72,7 @@ b = LoadVec2D(p,t)
 pf =  np.linalg.inv(M)@b
 
 
-print('The Mass Matrix(M) = \n',M)
+#print('The Mass Matrix(M) = \n',M)
 print('\nThe load vector (b)= \n',b)
 print('\nThe L2 Projection (pf) of the given function f(x) is: \n',pf)
 print('\n=======================================\n')
@@ -79,5 +80,5 @@ print('The total number of nodes = ',p.shape[1])
 print('The total number of elements = ', t.shape[1])
 print('\n=======================================\n')
 
-delunay_tri(M)
-poltall(x = p[0,:],y = p[1,:], z = pf)
+#delunay_tri(M)
+poltall(x = p[0,:],y = p[1,:], zt = pf)

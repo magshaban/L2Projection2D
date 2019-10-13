@@ -32,18 +32,36 @@ def delunay_tri(M):
     ax2.spy(M)
     plt.show()
 
-def poltall(x,y,z):
+def poltall(x,y,zt):
+
+
+    U = np.zeros(len(zt))
+
+    for i in range(len(zt)):
+        U[i] = zt[i][0]
+
     fig = plt.figure()
     ax = fig.gca(projection='3d')
-    #f = func(p[0,:], p[1,:])
-    # Plot the surface.
-    surf = ax.plot_surface(x, y, z, cmap=cm.coolwarm,
-                      linewidth=0, antialiased=False)
+    z =U
+    surf = ax.plot_trisurf(x, y, z, cmap=cm.Spectral,linewidth=0, antialiased=False)
     # Customize the z axis.
-    ax.set_zlim(-0.11, 0.23)
     ax.zaxis.set_major_locator(LinearLocator(10))
-    ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
-   
-    fig.colorbar(surf, shrink=0.7, aspect=15)
+    ax.zaxis.set_major_formatter(FormatStrFormatter('  %.03f'))
+    # Add a color bar which maps values to colors.
+    fig.colorbar(surf, shrink=0.7, aspect=9)
     plt.title('$L^2$ projection of f(x)')
-    plt.show()
+    plt.show() 
+#    
+#    fig = plt.figure()
+#    ax = fig.gca(projection='3d')
+#    #f = func(p[0,:], p[1,:])
+#    # Plot the surface.
+#    surf = ax.plot_surface(x, y, z, cmap=cm.coolwarm,
+#                      linewidth=0, antialiased=False)
+#    # Customize the z axis.
+#    ax.set_zlim(-0.11, 0.23)
+#    ax.zaxis.set_major_locator(LinearLocator(10))
+#    ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
+#   
+#    fig.colorbar(surf, shrink=0.7, aspect=15)
+#    plt.show()
